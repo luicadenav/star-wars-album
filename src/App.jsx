@@ -1,7 +1,8 @@
 import {useRoutes, BrowserRouter} from 'react-router-dom'
+import { AlbumProvider } from './Context';
 import './App.css';
-import  Header   from './components/Header'
-import  Aside   from './components/Aside'
+import Header from './components/Header'
+import Aside from './components/Aside'
 import Album from './components/Album'
 import NotFound  from './components/NotFound'
 import ObtenerLaminas from './components/ObtenerLaminas';
@@ -12,19 +13,18 @@ const AppRoutes =()=>{
     {path: '/Obtener-Laminas' , element : <ObtenerLaminas/>},
     {path: '/*' , element : <NotFound/>},
   ]);
-
   return routes;
 }
 
-
-
 function App() {
   return (
-    <BrowserRouter>
-      <Header/>
-      <Aside/>
-      <AppRoutes/>
-    </BrowserRouter>
+    <AlbumProvider>
+      <BrowserRouter>
+        <Header/>
+        <Aside/>
+        <AppRoutes/>
+      </BrowserRouter>
+    </AlbumProvider>
   )
 }
 
