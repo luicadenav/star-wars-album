@@ -1,5 +1,5 @@
 import {useRoutes, BrowserRouter} from 'react-router-dom'
-import { AlbumProvider } from './Context';
+import { AlbumProvider } from './contexts/albumContext';
 import './App.css';
 import Header from './components/Header'
 import Aside from './components/Aside'
@@ -18,13 +18,13 @@ const AppRoutes =()=>{
 
 function App() {
   return (
-    <AlbumProvider>
-      <BrowserRouter>
+    <BrowserRouter>
         <Header/>
         <Aside/>
+      <AlbumProvider>
         <AppRoutes/>
-      </BrowserRouter>
-    </AlbumProvider>
+      </AlbumProvider>
+    </BrowserRouter>
   )
 }
 
