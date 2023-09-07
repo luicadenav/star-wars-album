@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import useLaminas from '../../customHooks/useLaminas';
-import Card from '../common/Card';
 import './index.css';
 
 const sobres = new Array(4).fill('');
-console.log("🚀 ~ file: index.jsx:4 ~ sobres:", sobres)
 
 function ObtenerLaminas() {
     const [laminas, setLaminas] = useState([])
 
     function getLaminas() {
         useLaminas()
-            .then(data => setLaminas(data))
+            .then(data => {
+                setLaminas(data);
+                console.log("🚀 ~ file: index.jsx:14 ~ getLaminas ~ data:", data)
+            })
             .catch(() => setLaminas([]));
     }
 

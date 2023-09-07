@@ -8,7 +8,7 @@ function Aside() {
                     <NavLink to='/'>Mi Album</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/Obtener-Laminas'>Obtener Laminas</NavLink>
+                    <NavLink to='/star-wars-album/Obtener-Laminas'>Obtener Laminas</NavLink>
                 </li>
             </ul>
         </nav>
