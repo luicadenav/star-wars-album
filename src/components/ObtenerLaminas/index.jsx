@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useLaminas from '../../customHooks/useLaminas';
+import getSwapiData from '../../common/js/getSwapiData';
 import './index.css';
 
 const sobres = new Array(4).fill('');
@@ -7,8 +7,34 @@ const sobres = new Array(4).fill('');
 function ObtenerLaminas() {
     const [laminas, setLaminas] = useState([])
 
+    function getRandomId(max) {
+        return Math.floor(Math.random() * max  + 1);
+    }
+
+    function getFiveLaminas() {
+        const randomNumber = Math.random();
+
+        if (randomNumber > 0.5) {
+            return Promise.allSettled([
+                getSwapiData({ path: 'films', id: getRandomId(6) }),
+                getSwapiData({ path: 'people', id: getRandomId(82) }),
+                getSwapiData({ path: 'people', id: getRandomId(82) }),
+                getSwapiData({ path: 'people', id: getRandomId(82) }),
+                getSwapiData({ path: 'starships', id: getRandomId(36) })
+            ]);
+        }
+
+        return Promise.allSettled([
+            getSwapiData({ path: 'people', id: getRandomId(82) }),
+            getSwapiData({ path: 'people', id: getRandomId(82) }),
+            getSwapiData({ path: 'people', id: getRandomId(82) }),
+            getSwapiData({ path: 'starships', id: getRandomId(36) }),
+            getSwapiData({ path: 'starships', id: getRandomId(36) })
+        ]);
+    }
+
     function getLaminas() {
-        useLaminas()
+        getFiveLaminas()
             .then(data => {
                 setLaminas(data);
                 console.log("🚀 ~ file: index.jsx:14 ~ getLaminas ~ data:", data)

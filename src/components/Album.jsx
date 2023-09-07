@@ -1,4 +1,4 @@
-import CardsSection from "./common/CardsSection";
+import CardsSection from "./CardsSection";
 
 function Album() {
     return (
