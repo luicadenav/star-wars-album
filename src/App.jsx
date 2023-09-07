@@ -10,6 +10,7 @@ import ObtenerLaminas from './components/ObtenerLaminas';
 const AppRoutes =()=>{
   let routes = useRoutes ([
     {path: '/' , element : <Album/>},
+    {path: '/star-wars-album' , element : <Album/>},
     {path: '/Obtener-Laminas' , element : <ObtenerLaminas/>},
     {path: '/*' , element : <NotFound/>},
   ]);

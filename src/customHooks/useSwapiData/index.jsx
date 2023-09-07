@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 const baseUrl = 'https://swapi.dev/api';
 
-function useSwapiData({ path }) {
+function useSwapiData({ path,id }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`${baseUrl}/${path}`)
+        fetch(`${baseUrl}/${path}/${id}`)
             .then(res => res.json())
-            .then(data => setData(data.results))
+            .then(data => setData(data))
             .catch(err => {
                 console.error(err);
                 setData([]);
