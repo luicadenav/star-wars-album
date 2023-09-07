@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import CardList from './CardList';
-import AlbumContext from '../contexts/albumContext';
+import CardList from '../CardList';
+import AlbumContext from '../../contexts/albumContext';
 
 function CardsSection({ title }) {
     const context = useContext(AlbumContext);

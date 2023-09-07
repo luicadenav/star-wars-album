@@ -1,10 +1,10 @@
 import {useRoutes, BrowserRouter} from 'react-router-dom'
 import { AlbumProvider } from './contexts/albumContext';
 import './App.css';
-import Header from './components/Header'
-import Aside from './components/Aside'
-import Album from './components/Album'
-import NotFound  from './components/NotFound'
+import Header from './components/Header/index'
+import Aside from './components/Aside/index'
+import Album from './components/Album/index'
+import NotFound  from './components/NotFound/index'
 import ObtenerLaminas from './components/ObtenerLaminas';
 
 const AppRoutes =()=>{
