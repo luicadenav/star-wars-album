@@ -20,11 +20,13 @@ const AppRoutes =()=>{
 function App() {
   return (
     <BrowserRouter>
-        <Header/>
+     <Header/>
+    <div className='content'>
         <Aside/>
-      <AlbumProvider>
-        <AppRoutes/>
-      </AlbumProvider>
+        <AlbumProvider>
+          <AppRoutes/>
+        </AlbumProvider>
+    </div>
     </BrowserRouter>
   )
 }

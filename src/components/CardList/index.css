@@ -2,6 +2,9 @@
     list-style: none;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 24px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    gap: 24px;
+
+
 }

@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import './index.css';
 
 function Aside() {
     return(
-        <nav>
+        <nav className="aside-content">
             <ul>
                 <li>
                     <NavLink to='/'>Mi Album</NavLink>
