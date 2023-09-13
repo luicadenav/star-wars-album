@@ -54,7 +54,7 @@ function ObtenerLaminas() {
     }
     
     return (
-        <div>
+        <div className='obtener-content'>
             <section>
                 <h2>obtener laminas</h2>
                 <ul className="sobres">

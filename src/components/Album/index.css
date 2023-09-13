@@ -2,12 +2,9 @@
     width: 100%;
     padding: 24px;
     background-color: black;
-
-
 }
 
 .album-content h2 {
     color: white;
-
-
+    letter-spacing: 3px;
 }

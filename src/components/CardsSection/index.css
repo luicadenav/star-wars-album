@@ -1,4 +1,10 @@
 .card-section h3 {
     color: white;
+    padding: 24px;
+    font-family: "anakinmonoregular";
+    font-size: 24px;
+    font-weight: lighter;
+    margin-top: 24px;
+    text-align: center;
 
 }
