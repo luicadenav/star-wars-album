@@ -4,7 +4,7 @@ import "./index.css"
 function Album() {
     return (
         <div className="album-content">
-            <h2>Album</h2> 
+            <h2>mi album</h2> 
             <CardsSection title="peliculas" />
             <CardsSection title="personajes" />
             <CardsSection title="naves" />

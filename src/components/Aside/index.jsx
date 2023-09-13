@@ -6,10 +6,10 @@ function Aside() {
         <nav className="aside-content">
             <ul>
                 <li>
-                    <NavLink to='/'>Mi Album</NavLink>
+                    <NavLink to='/'>mi album</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/star-wars-album/Obtener-Laminas'>Obtener Laminas</NavLink>
+                    <NavLink to='/star-wars-album/Obtener-Laminas'>obtener laminas</NavLink>
                 </li>
             </ul>
         </nav>
