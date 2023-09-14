@@ -2,6 +2,9 @@
     width: 100%;
     padding: 24px;
     background-color: black;
+    min-height: 86vh;
+
+
 }
 
 .album-content h2 {
